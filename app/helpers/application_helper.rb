@@ -7,7 +7,7 @@ module ApplicationHelper
     precision = options[:precision] || 2
     display_currency = options.fetch(:display_currency, true)
     btc = "%.#{precision}f" % to_btc(amount)
-    btc += " PPC" if display_currency
+    btc += " GMC" if display_currency
     btc = "<span class='convert-from-btc' data-to='#{currency.upcase}'>#{btc}</span>" if currency
     btc = "<nobr>#{btc}</nobr>" if nobr
     btc.html_safe
@@ -26,7 +26,7 @@ module ApplicationHelper
   end
 
   def transaction_url(txid)
-    "http://bkchain.org/ppc/tx/#{txid}"
+    "http://gmc.cryptocloudhosting.org:3001/tx/#{txid}"
   end
 
   def address_explorers
@@ -35,9 +35,9 @@ module ApplicationHelper
 
   def address_url(address, explorer = address_explorers.first)
     case explorer
-    when :blockr then "http://ppc.blockr.io/address/info/#{address}"
-    when :bkchain then "http://bkchain.org/ppc/address/#{address}"
-    when :cryptocoin then "http://ppc.cryptocoinexplorer.com/address/#{address}"
+    when :blockr then "http://gmc.cryptocloudhosting.org:3001/address/#{address}"
+    when :bkchain then "http://gmc.cryptocloudhosting.org:3001/address/#{address}"
+    when :cryptocoin then "http://gmc.cryptocloudhosting.org:3001/address/#{address}"
     else raise "Unknown provider: #{provider.inspect}"
     end
   end

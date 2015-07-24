@@ -1,11 +1,12 @@
 #project-index
   .row
     .col-md-10
-      %h1 Projects
+      %font{:color => "black", :size => "12"} Projects
     .col-md-2
       .text-right
         = link_to "Create a project", new_project_path, class: 'btn btn-default btn-block'
   %p
+    = link_to image_tag( 'changes.png')
     %table.table.table-hover
       %thead
         %tr

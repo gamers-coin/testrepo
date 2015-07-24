@@ -1,11 +1,15 @@
-- content_for :main_content do
+﻿- content_for :main_content do
   #home-page
     / Jumbotron
     .jumbotron
       .container
-        %h1 Make anything happen
+        %br
+        %br
+        %br
+        %h1 Teamwork makes the dream work
         %p.lead 
 
+        %h8 Start where you are. Use what you have. Do what you can.
         %a.btn.btn-lg.btn-success{href: projects_path} See projects
 
     .container.container-md-height
@@ -13,9 +17,9 @@
       .row.row-md-height
         .col-lg-3.col-md-height.col-top.main-panel.donate
           .panel-content
-            %h2 Donate
+            %h2 Donate GameCredits
             %p
-              Donate to projects to make them happen.
+              Donate to Gaming projects to make them happen.
             .button-container
               %a.btn.btn-primary.btn-block{href: projects_path} See projects
         .col-lg-3.col-md-height.col-top.main-panel.contribute
@@ -40,6 +44,6 @@
             .button-container
               %a.btn.btn-primary.btn-block{href: faq_path} FAQ
       / - if current_user
-      /         %a.btn.btn-primary{href: user_path(current_user)} Change your peercoin address »
+      /         %a.btn.btn-primary{href: user_path(current_user)} Change your GameCredits address »
       /       - else
       /         %a.btn.btn-primary{href: user_omniauth_authorize_path(:github)} Sign In »      
