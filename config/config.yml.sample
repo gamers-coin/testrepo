@@ -6,8 +6,8 @@ daemon:
   username: rpcuser
   password: rpcpassword
   host: localhost
-  port: 9904
-  path: /path/to/ppcoin/src/ppcoind
+  port: 40001
+  path: /path/to/gamecredits/src/gamecreditsd
 
 devise:
   secret: "111111111111"
@@ -35,12 +35,12 @@ exception_email: admin@example.com # an email will be sent to this address if an
 #   host: errbit.tip4commit.com
 
 tip: 0.01
-min_payout: 1.0 # in PPC
+min_payout: 1.0 # in GMC
 our_fee: 0.05
 tipper_delay: "1.hour"
 
-address_versions: # 55/117 for GameCredits, 111/196 for testnet, see base58.h
-  - 111
-  - 196
+address_versions: # 38/5 for Gamecredits, 111/196 for testnet, see base58.h
+  - 38
+  - 5
 
 # canonical_host: code4money.example.com # will redirect all other hostnames to this one
