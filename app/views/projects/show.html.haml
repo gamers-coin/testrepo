@@ -5,12 +5,12 @@
   
 .row
   .col-md-8
-    %h1
+    %h5
       = @project.name
       - if (url = @project.github_url).present?
         %small= link_to glyph(:github), url, target: '_blank'
     - unless @project.description.blank?
-      %h3= @project.description
+      %h6= @project.description
     - unless @project.detailed_description.blank?
       = render_markdown @project.detailed_description
 
@@ -90,7 +90,7 @@
 .row
   .col-md-8
     %hr
-    %h4 Promote #{@project.name}
+    %h6 Promote #{@project.name}
     %p
       / AddThis Button BEGIN
       .addthis_toolbox.addthis_default_style.addthis_32x32_style(addthis:data_track_clickback="false" addthis:data_track_addressbar="false")
@@ -102,7 +102,7 @@
         %a.addthis_counter.addthis_bubble_style
       / AddThis Button END
 
-    %h4 Embed in README.md
+    %h4 Embed in Github README.md
     %p= link_to image_tag(project_url(@project, format: :svg), alt: 'code4Money'), project_url(@project)
     %p
       %input.form-control{type: 'text', value: "[![tip for next commit](#{project_url(@project, format: :svg)})](#{project_url(@project)})"}
