@@ -102,7 +102,7 @@
         %a.addthis_counter.addthis_bubble_style
       / AddThis Button END
 
-    %h4 Embed in Github README.md
+    %h6 Embed in Github README.md
     %p= link_to image_tag(project_url(@project, format: :svg), alt: 'code4Money'), project_url(@project)
     %p
       %input.form-control{type: 'text', value: "[![tip for next commit](#{project_url(@project, format: :svg)})](#{project_url(@project)})"}
