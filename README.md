@@ -1,8 +1,8 @@
 code4money
 ==========
 
-[![GameCredits tip for next commit](http://code4money.com/projects/1.svg)](http://code4money.com/projects/1)
-[![bitcoin tip for next commit](http://tip4commit.com/projects/560.svg)](http://tip4commit.com/projects/560)
+[![GameCredits tip for next commit](http://37.120.160.213:3000/projects/1.svg)](http://37.120.160.213:3000/projects/1)
+[![Bitcoin tip for next commit](http://tip4commit.com/projects/560.svg)](http://tip4commit.com/projects/560)
 
 Donate GameCreditss to open source projects or make commits and get tips for it.
 
